@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingCategoryDef>
+    <defName>MusicAlbums</defName>
+    <label>music albums</label>
+    <parent>ItemsMisc</parent>
+  </ThingCategoryDef>
+
+  <ThingDef Name="MusicAlbumBase" Abstract="True">
+    <thingClass>MusicAlbums.MusicAlbum</thingClass>
+    <category>Item</category>
+    <selectable>true</selectable>
+    <rotatable>true</rotatable>
+    <altitudeLayer>Item</altitudeLayer>
+    <tickerType>Rare</tickerType>
+    <alwaysHaulable>true</alwaysHaulable>
+    <burnableByRecipe>true</burnableByRecipe>
+    <useHitPoints>true</useHitPoints>
+    <healthAffectsPrice>true</healthAffectsPrice>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <tradeNeverStack>true</tradeNeverStack>
+    <neverMultiSelect>true</neverMultiSelect>
+    <stackLimit>1</stackLimit>
+    <tradeNeverGenerateStacked>true</tradeNeverGenerateStacked>
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+    </comps>
+    <thingCategories>
+      <li>MusicAlbums</li>
+    </thingCategories>
+    <inspectorTabs>
+      <li>MusicAlbums.ITab_MusicAlbum</li>
+    </inspectorTabs>
+    <statBases>
+      <MaxHitPoints>40</MaxHitPoints>
+      <DeteriorationRate>3</DeteriorationRate>
+      <Mass>0.10</Mass>
+      <Flammability>0.5</Flammability>
+      <Beauty>2</Beauty>
+    </statBases>
+    <thingSetMakerTags>
+      <li>RewardStandardMidFreq</li>
+    </thingSetMakerTags>
+    <possessionCount>1</possessionCount>
+  </ThingDef>
+
+  <ThingDef ParentName="MusicAlbumBase">
+    <defName>MusicAlbum_CD</defName>
+    <label>music CD</label>
+    <description>A compact disc containing a music album. An older format that somehow survived into the spacefaring age, carried world to world by those who still preferred something physical. The case is jewel-clear, the liner notes folded inside.</description>
+    <graphicData>
+      <texPath>Things/Item/Book/Novel/Novel</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.80</drawSize>
+    </graphicData>
+    <uiIconPath>Things/Item/Book/Novel/Novel</uiIconPath>
+    <statBases>
+      <MarketValue>120</MarketValue>
+    </statBases>
+    <comps>
+      <li Class="MusicAlbums.CompProperties_MusicAlbum">
+        <nameMaker>Namer_MusicAlbum</nameMaker>
+        <descriptionMaker>Description_MusicAlbum</descriptionMaker>
+        <ageYearsRange>5~200</ageYearsRange>
+        <pickWeight>1</pickWeight>
+        <developmentalStageFilter>Child, Adult</developmentalStageFilter>
+        <openGraphic>
+          <texPath>Things/Item/Book/Novel/Novel_Open</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>0.70</drawSize>
+        </openGraphic>
+        <doers>
+          <li Class="MusicAlbums.AlbumOutcomeProperties_JoyFactorModifier" />
+          <li Class="MusicAlbums.AlbumOutcomeProperties_MoodBuff">
+            <thought>ListenedToAlbum</thought>
+            <minListenFactor>2000</minListenFactor>
+          </li>
+          <li Class="MusicAlbums.AlbumOutcomeProperties_Inspiration" />
+        </doers>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>

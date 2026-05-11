@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <JobDef>
+    <defName>ListenToAlbum</defName>
+    <driverClass>MusicAlbums.JobDriver_ListeningToAlbum</driverClass>
+    <reportString>listening to TargetA</reportString>
+    <joyDuration>4000</joyDuration>
+    <joyKind>MusicListening</joyKind>
+  </JobDef>
+
+</Defs>

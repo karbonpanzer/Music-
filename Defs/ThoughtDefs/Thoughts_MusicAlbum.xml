@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThoughtDef>
+    <defName>ListenedToAlbum</defName>
+    <thoughtClass>Thought_Memory</thoughtClass>
+    <durationDays>1</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>listened to terrible music</label>
+        <description>That disc was genuinely unpleasant. I wish I hadn't bothered.</description>
+        <baseMoodEffect>-3</baseMoodEffect>
+      </li>
+      <li>
+        <label>listened to some music</label>
+        <description>Not much to say about that disc. It passed the time.</description>
+        <baseMoodEffect>-1</baseMoodEffect>
+      </li>
+      <li>
+        <label>listened to decent music</label>
+        <description>That was a pleasant listen. Nothing extraordinary, but enjoyable.</description>
+        <baseMoodEffect>3</baseMoodEffect>
+      </li>
+      <li>
+        <label>listened to good music</label>
+        <description>A solid album. I found myself humming along.</description>
+        <baseMoodEffect>5</baseMoodEffect>
+      </li>
+      <li>
+        <label>listened to excellent music</label>
+        <description>That album was genuinely moving. The compositions were inspired.</description>
+        <baseMoodEffect>8</baseMoodEffect>
+      </li>
+      <li>
+        <label>listened to masterwork music</label>
+        <description>A masterpiece. Every track was crafted with extraordinary skill and feeling.</description>
+        <baseMoodEffect>12</baseMoodEffect>
+      </li>
+      <li>
+        <label>listened to legendary music</label>
+        <description>I don't have words. That album moved something deep inside me. I may never hear its like again.</description>
+        <baseMoodEffect>16</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+</Defs>

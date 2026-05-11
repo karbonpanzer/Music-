@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <RulePackDef>
+    <defName>Namer_MusicAlbum</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>title->[titleStandalone]</li>
+        <li>title(p=2)->[titleArtistNamed]</li>
+        <li>title(p=3)->[titleEvocative]</li>
+
+        <li>titleStandalone->[emotion]</li>
+        <li>titleStandalone->[place]</li>
+        <li>titleStandalone->[place] [albumSuffix]</li>
+        <li>titleStandalone->[adjective] [noun]</li>
+        <li>titleStandalone->[noun] of [noun]</li>
+        <li>titleStandalone->[noun] and [noun]</li>
+        <li>titleStandalone->The [noun]</li>
+        <li>titleStandalone->The [adjective] [noun]</li>
+        <li>titleStandalone->The [place] [albumSuffix]</li>
+        <li>titleStandalone->[number] [noun]s</li>
+
+        <li>titleArtistNamed->[ANYPAWN_nameIndef]</li>
+        <li>titleArtistNamed->[ANYPAWN_nameIndef]: [titleStandalone]</li>
+        <li>titleArtistNamed->[ANYPAWN_nameIndef] and the [noun]s</li>
+        <li>titleArtistNamed->[ANYPAWN_nameIndef] Live at [place]</li>
+        <li>titleArtistNamed->[ANYPAWN_nameIndef] Unplugged</li>
+        <li>titleArtistNamed->The [ANYPAWN_nameIndef] [albumSuffix]</li>
+        <li>titleArtistNamed->[ANYPAWN_nameIndef]'s [emotion] [albumSuffix]</li>
+
+        <li>titleEvocative->Songs of [noun]</li>
+        <li>titleEvocative->Songs from [place]</li>
+        <li>titleEvocative->Hymns to the [noun]</li>
+        <li>titleEvocative->Odes to [emotion]</li>
+        <li>titleEvocative->Beyond the [noun]</li>
+        <li>titleEvocative->Into the [noun]</li>
+        <li>titleEvocative->Under [adjective] [noun]s</li>
+        <li>titleEvocative->Echoes of [place]</li>
+        <li>titleEvocative->Lost in [place]</li>
+        <li>titleEvocative->Dreaming of [noun]</li>
+        <li>titleEvocative->Waiting for the [noun]</li>
+        <li>titleEvocative->From [worldname] with [emotion]</li>
+        <li>titleEvocative->[adjective] [noun]s in [place]</li>
+        <li>titleEvocative->The [noun] that [verbPhrase]</li>
+
+        <li>verbPhrase->never was</li>
+        <li>verbPhrase->could not be named</li>
+        <li>verbPhrase->burned bright</li>
+        <li>verbPhrase->fell to silence</li>
+        <li>verbPhrase->sang no more</li>
+        <li>verbPhrase->remained</li>
+        <li>verbPhrase->returned</li>
+        <li>verbPhrase->was lost</li>
+
+        <li>albumSuffix->Sessions</li>
+        <li>albumSuffix->Recordings</li>
+        <li>albumSuffix->Collection</li>
+        <li>albumSuffix->Anthology</li>
+        <li>albumSuffix->Tapes</li>
+        <li>albumSuffix->Archives</li>
+        <li>albumSuffix->Volume</li>
+        <li>albumSuffix->Chronicles</li>
+        <li>albumSuffix->Works</li>
+        <li>albumSuffix->Compositions</li>
+
+        <li>emotion->Sorrow</li>
+        <li>emotion->Joy</li>
+        <li>emotion->Rage</li>
+        <li>emotion->Longing</li>
+        <li>emotion->Hope</li>
+        <li>emotion->Despair</li>
+        <li>emotion->Wonder</li>
+        <li>emotion->Grief</li>
+        <li>emotion->Triumph</li>
+        <li>emotion->Solitude</li>
+        <li>emotion->Yearning</li>
+        <li>emotion->Ecstasy</li>
+        <li>emotion->Melancholy</li>
+        <li>emotion->Peace</li>
+        <li>emotion->Fury</li>
+        <li>emotion->Tenderness</li>
+        <li>emotion->Nostalgia</li>
+        <li>emotion->Defiance</li>
+        <li>emotion->Reverence</li>
+        <li>emotion->Abandon</li>
+
+        <li>place->the Rim</li>
+        <li>place->the Stars</li>
+        <li>place->the Void</li>
+        <li>place->the Colony</li>
+        <li>place->the Wasteland</li>
+        <li>place->the Frontier</li>
+        <li>place->the Dark</li>
+        <li>place->the Deep</li>
+        <li>place->the Desert</li>
+        <li>place->the Mountains</li>
+        <li>place->the River</li>
+        <li>place->the Forest</li>
+        <li>place->the Ruins</li>
+        <li>place->the City</li>
+        <li>place->the Plains</li>
+        <li>place->the Ice</li>
+        <li>place->the Jungle</li>
+        <li>place->[worldname]</li>
+
+        <li>noun->Light</li>
+        <li>noun->Shadow</li>
+        <li>noun->Stone</li>
+        <li>noun->Fire</li>
+        <li>noun->Rain</li>
+        <li>noun->Wind</li>
+        <li>noun->Dream</li>
+        <li>noun->Star</li>
+        <li>noun->Bone</li>
+        <li>noun->Blood</li>
+        <li>noun->Heart</li>
+        <li>noun->Road</li>
+        <li>noun->Ghost</li>
+        <li>noun->Wave</li>
+        <li>noun->Silence</li>
+        <li>noun->Voice</li>
+        <li>noun->Echo</li>
+        <li>noun->Memory</li>
+        <li>noun->River</li>
+        <li>noun->Mountain</li>
+        <li>noun->Sky</li>
+        <li>noun->Sea</li>
+        <li>noun->Night</li>
+        <li>noun->Dawn</li>
+        <li>noun->Storm</li>
+        <li>noun->Tide</li>
+        <li>noun->Spark</li>
+
+        <li>adjective->Distant</li>
+        <li>adjective->Ancient</li>
+        <li>adjective->Broken</li>
+        <li>adjective->Silent</li>
+        <li>adjective->Burning</li>
+        <li>adjective->Hollow</li>
+        <li>adjective->Golden</li>
+        <li>adjective->Cold</li>
+        <li>adjective->Pale</li>
+        <li>adjective->Dark</li>
+        <li>adjective->Lost</li>
+        <li>adjective->Forgotten</li>
+        <li>adjective->Bright</li>
+        <li>adjective->Heavy</li>
+        <li>adjective->Soft</li>
+        <li>adjective->Rusted</li>
+        <li>adjective->Strange</li>
+        <li>adjective->Wild</li>
+        <li>adjective->Deep</li>
+        <li>adjective->Slow</li>
+        <li>adjective->Blue</li>
+        <li>adjective->Endless</li>
+        <li>adjective->Final</li>
+        <li>adjective->First</li>
+
+        <li>number->Four</li>
+        <li>number->Seven</li>
+        <li>number->Nine</li>
+        <li>number->Twelve</li>
+        <li>number->Three</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+</Defs>

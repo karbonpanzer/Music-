@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <RulePackDef>
+    <defName>Description_MusicAlbum</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>desc->[overview]. [production]. [reception].</li>
+        <li>desc->[overview]. [anecdote]. [reception].</li>
+        <li>desc->[overview]\n\n[anecdote]. [production].\n\n[quality_statement].</li>
+
+        <li>overview->A [genre] [format] by [artist]</li>
+        <li>overview->An [era] [genre] [format] attributed to [artist]</li>
+        <li>overview->A [adjective_quality] [genre] recording from [artist]</li>
+        <li>overview->Recorded by [artist], this [format] blends [genre] with [genre2] influences</li>
+        <li>overview->The liner notes credit [artist] as the sole composer and performer</li>
+        <li>overview->[artist]'s [ordinal] studio [format]</li>
+        <li>overview->A live [format] captured somewhere in [worldname]</li>
+        <li>overview->A collaborative [format] from the [worldname] music scene</li>
+
+        <li>production->The liner notes say it was pressed in limited quantities by a small label on [worldname]</li>
+        <li>production->According to the [disc_location], it was self-released by [artist] after a string of rejections</li>
+        <li>production->The [disc_location] says the recording was made in a single overnight session</li>
+        <li>production->The liner notes indicate this was the last thing [artist] ever recorded</li>
+        <li>production->A stamped note on the [disc_location] says this was one of only fifty copies pressed</li>
+        <li>production->The [disc_location] notes that all master recordings were lost in a fire, making this a rare survivor</li>
+        <li>production->According to the [disc_location], the original pressing sold poorly but became sought after later</li>
+        <li>production->The [disc_location] claims this was recorded in a single room with no professional equipment</li>
+        <li>production->A handwritten note on the [disc_location] says copies were distributed free of charge</li>
+        <li>production->The [disc_location] credits over a dozen musicians, none of whom are named anywhere else</li>
+        <li>production->The [disc_location] says [artist] spent three years writing these compositions before recording them</li>
+        <li>production->According to the [disc_location], this was intended for a film that was never made</li>
+
+        <li>reception(quality[greater_than]4)->By most accounts it is considered a landmark recording of its era</li>
+        <li>reception(quality[greater_than]4)->The [disc_location] is filled with glowing critical praise</li>
+        <li>reception(quality[greater_than]3)->It found an appreciative audience, if not a large one</li>
+        <li>reception(quality[greater_than]3)->Most who encounter it seem to find it moving in some way</li>
+        <li>reception(quality[less_than]4)->Critics were divided, though listeners seemed warmer to it</li>
+        <li>reception(quality[less_than]4)->It passed largely without notice on release</li>
+        <li>reception(quality[less_than]3)->Reviews at the time were unkind</li>
+        <li>reception(quality[less_than]2)->It is unclear why it was ever pressed at all</li>
+        <li>reception(quality==6)->It is spoken of in hushed tones by those who know it</li>
+
+        <li>anecdote->According to the [disc_location], [artist] wrote the opening track during a siege</li>
+        <li>anecdote->A note inside says that [artist] refused to listen to a playback of the finished recording</li>
+        <li>anecdote->The [disc_location] mentions that [artist] was reportedly in poor health throughout the sessions</li>
+        <li>anecdote->According to the [disc_location], [artist] dedicated the [format] to someone named only as 'R'</li>
+        <li>anecdote->The [disc_location] claims [artist] was unaware the sessions were being recorded</li>
+        <li>anecdote->A scrawled note on the inner sleeve reads 'this one is for those who didn't make it'</li>
+        <li>anecdote->According to the [disc_location], the [format] was recorded in an abandoned building on [worldname]</li>
+        <li>anecdote->The [disc_location] says [artist] performed the entire [format] in one continuous take</li>
+        <li>anecdote->According to the [disc_location], [artist] never spoke publicly about this [format]</li>
+        <li>anecdote->A faded inscription inside reads '[artist] — [worldname] — [date]'</li>
+        <li>anecdote->The [disc_location] thanks 'everyone who survived'</li>
+        <li>anecdote->According to the [disc_location], [artist] considered this [format] a failure and was reportedly furious it was released</li>
+
+        <li>adjective_quality(quality==6)->extraordinary</li>
+        <li>adjective_quality(quality==5)->masterful</li>
+        <li>adjective_quality(quality==4)->accomplished</li>
+        <li>adjective_quality(quality==3)->competent</li>
+        <li>adjective_quality(quality==2)->uneven</li>
+        <li>adjective_quality(quality==1)->rough</li>
+        <li>adjective_quality(quality==0)->amateurish</li>
+
+        <li>quality_statement(quality[greater_than]4)->Listening to it, it is easy to understand why some consider it essential</li>
+        <li>quality_statement(quality[greater_than]4)->There is something in it that feels genuinely irreplaceable</li>
+        <li>quality_statement(quality[greater_than]3)->It holds up well, even across the distance of years</li>
+        <li>quality_statement(quality[greater_than]3)->Not everyone would call it great, but most would call it good</li>
+        <li>quality_statement(quality[less_than]4)->Its flaws are audible, but so is the effort behind it</li>
+        <li>quality_statement(quality[less_than]3)->It is more interesting as an artifact than as a listening experience</li>
+        <li>quality_statement(quality[less_than]2)->It is hard to recommend, even to completionists</li>
+
+        <li>artist->[ANYPAWN_nameFull]</li>
+        <li>artist->[ANYPAWN_nameIndef] and the [bandSuffix]</li>
+        <li>artist->The [bandSuffix]</li>
+        <li>artist->The [worldname] [bandSuffix]</li>
+        <li>artist->[ANYPAWN_nameIndef]'s [bandSuffix]</li>
+        <li>artist->an unnamed [performer]</li>
+
+        <li>bandSuffix->Collective</li>
+        <li>bandSuffix->Ensemble</li>
+        <li>bandSuffix->Orchestra</li>
+        <li>bandSuffix->Quartet</li>
+        <li>bandSuffix->Trio</li>
+        <li>bandSuffix->Wanderers</li>
+        <li>bandSuffix->Survivors</li>
+        <li>bandSuffix->Drifters</li>
+        <li>bandSuffix->Voices</li>
+        <li>bandSuffix->Remnants</li>
+
+        <li>performer->musician</li>
+        <li>performer->composer</li>
+        <li>performer->singer</li>
+        <li>performer->instrumentalist</li>
+        <li>performer->group</li>
+
+        <li>genre->folk</li>
+        <li>genre->ambient</li>
+        <li>genre->classical</li>
+        <li>genre->jazz</li>
+        <li>genre->drone</li>
+        <li>genre->electronic</li>
+        <li>genre->choral</li>
+        <li>genre->blues</li>
+        <li>genre->experimental</li>
+        <li>genre->orchestral</li>
+        <li>genre->acoustic</li>
+        <li>genre->industrial</li>
+        <li>genre->chamber</li>
+        <li>genre->devotional</li>
+
+        <li>genre2->folk</li>
+        <li>genre2->ambient</li>
+        <li>genre2->classical</li>
+        <li>genre2->jazz</li>
+        <li>genre2->electronic</li>
+        <li>genre2->noise</li>
+        <li>genre2->choral</li>
+        <li>genre2->minimalist</li>
+        <li>genre2->improvisational</li>
+
+        <li>format->album</li>
+        <li>format->recording</li>
+        <li>format->collection</li>
+        <li>format->release</li>
+        <li>format->work</li>
+        <li>format->session</li>
+        <li>format->disc</li>
+
+        <li>era->early</li>
+        <li>era->late-period</li>
+        <li>era->pre-collapse</li>
+        <li>era->post-war</li>
+        <li>era->mid-period</li>
+        <li>era->archival</li>
+        <li>era->contemporary</li>
+        <li>era->retrospective</li>
+
+        <li>disc_location->liner notes</li>
+        <li>disc_location->back cover</li>
+        <li>disc_location->front sleeve</li>
+        <li>disc_location->inner sleeve</li>
+        <li>disc_location->insert card</li>
+        <li>disc_location->booklet</li>
+
+        <li>ordinal->debut</li>
+        <li>ordinal->second</li>
+        <li>ordinal->third</li>
+        <li>ordinal->final</li>
+        <li>ordinal->posthumous</li>
+        <li>ordinal->only known</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+</Defs>

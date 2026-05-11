@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <JoyGiverDef>
+    <defName>ListenToAlbum</defName>
+    <giverClass>MusicAlbums.JoyGiver_ListenToAlbum</giverClass>
+    <baseChance>3</baseChance>
+    <jobDef>ListenToAlbum</jobDef>
+    <joyKind>MusicListening</joyKind>
+    <requiredCapacities>
+      <li>Hearing</li>
+    </requiredCapacities>
+    <canDoWhileInBed>true</canDoWhileInBed>
+  </JoyGiverDef>
+
+</Defs>
