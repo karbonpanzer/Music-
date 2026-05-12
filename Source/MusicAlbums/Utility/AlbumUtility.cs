@@ -11,7 +11,7 @@ namespace MusicAlbums.Utility
         private static readonly List<Thing> TmpCandidates = new List<Thing>();
         private static readonly List<Thing> TmpOutcomeCandidates = new List<Thing>();
 
-        // Same curve values as BookUtility.QualityJoyFactor — CDs hit the same artistic quality tiers as novels so there's no reason to differ.
+        // I'm matching BookUtility.QualityJoyFactor exactly. CDs hit the same quality tiers as novels and there's no reason to make music feel mechanically weaker or stronger.
         private static readonly SimpleCurve QualityJoyFactor = new SimpleCurve
         {
             new CurvePoint(0f, 1.2f),
@@ -26,7 +26,7 @@ namespace MusicAlbums.Utility
         public static float GetAlbumJoyFactorForQuality(QualityCategory quality) =>
             QualityJoyFactor.Evaluate((int)quality);
 
-        // Reusing the room's ReadingBonus stat — a nice room improves listening for the same reasons it improves reading, so adding a new stat would be redundant.
+        // Reusing ReadingBonus here rather than adding a new room stat. A nice room improves listening for the same reasons it improves reading, and one fewer stat to define is better.
         public static float GetListeningBonus(Thing album)
         {
             Room room = album.GetRoom();
@@ -35,7 +35,7 @@ namespace MusicAlbums.Utility
             return 1f;
         }
 
-        // Gating on Hearing so deaf pawns won't seek albums autonomously, though a player can still force them to listen if they want.
+        // Gating on Hearing so deaf pawns won't seek albums on their own. A player can still force a deaf pawn to listen manually if they want to, this just stops autonomous seeking.
         public static bool CanListenEver(Pawn listener)
         {
             if (listener.DevelopmentalStage == DevelopmentalStage.Baby)
@@ -45,6 +45,7 @@ namespace MusicAlbums.Utility
             return true;
         }
 
+        // ReadingSpeed doubles as a media engagement stat here. I didn't want to define a new ListeningSpeed stat just to mirror what ReadingSpeed already does for books.
         public static bool CanListenNow(Pawn listener)
         {
             if (!CanListenEver(listener)) return false;
@@ -73,7 +74,7 @@ namespace MusicAlbums.Utility
             return true;
         }
 
-        // Can't use ThingRequestGroup.Book since that's tied to the vanilla Book ThingClass, so I search HaulableAlways and filter to MusicAlbum instances instead.
+        // ThingRequestGroup.Book is tied to the vanilla Book ThingClass so I can't use it here. HaulableAlways covers everything that can be picked up, and I filter down to MusicAlbum instances manually. It's a broader search than I'd like but there's no better group.
         public static bool TryGetRandomAlbumToListen(Pawn pawn, out MusicAlbum album)
         {
             album = null;
@@ -90,6 +91,7 @@ namespace MusicAlbums.Utility
                 return false;
             }
 
+            // Prefer albums that still have an outcome to give this pawn. If nothing qualifies I fall back to any valid album so listening still happens even if benefits are spent.
             foreach (Thing t in TmpCandidates)
                 if (t is MusicAlbum a && a.ProvidesOutcome(pawn))
                     TmpOutcomeCandidates.Add(t);
@@ -103,7 +105,7 @@ namespace MusicAlbums.Utility
             return true;
         }
 
-        // Skipping pawn.reading policy filters — albums aren't part of that system.
+        // I'm skipping pawn.reading policy filters deliberately. Albums aren't books and I don't want players to need to configure a separate reading policy just to let pawns listen.
         private static bool IsValidAlbum(Thing thing, Pawn pawn)
         {
             if (thing is not MusicAlbum) return false;

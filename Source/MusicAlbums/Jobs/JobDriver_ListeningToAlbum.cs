@@ -8,7 +8,7 @@ using Verse.AI;
 
 namespace MusicAlbums.Jobs
 {
-    // Kept close to JobDriver_Reading. Cuts are: no isLearningDesire path, no Intellectual skill gain. Reset moves to the finish action so the mood buff can fire again each session rather than only once per generation.
+    // Kept close to JobDriver_Reading. Cuts are: no isLearningDesire path, no Intellectual skill gain. Reset is called in the finish action rather than generation so the buff can fire again on the next listen session.
     public class JobDriver_ListeningToAlbum : JobDriver
     {
         public const TargetIndex AlbumIndex = TargetIndex.A;
@@ -16,7 +16,7 @@ namespace MusicAlbums.Jobs
 
         private const int ManualListenTicks = 4000;
         private const int ChairSearchRadius = 32;
-        private const int UrgentJobCheckIntervalTicks = 600;
+        private const int UrgentJobCheckIntervalTicks = 600; // 10 seconds at 60 ticks/second, same interval vanilla reading uses
 
         private bool hasInInventory;
         private bool carrying;
@@ -136,7 +136,7 @@ namespace MusicAlbums.Jobs
             {
                 Album.IsPlaying = false;
 
-                // TaleRecorder.RecordTale(MusicAlbumsDefOf.ListenedToAlbum, pawn, Album);
+                // TaleRecorder skipped for now - I would need a proper TaleData_ListenedToAlbum class
 
                 JoyUtility.TryGainRecRoomThought(pawn);
 
@@ -163,13 +163,13 @@ namespace MusicAlbums.Jobs
             return toil;
         }
 
-        // Spot-finding lifted from JobDriver_Reading — sitting to listen works the same way.
+        // Spot-finding lifted from JobDriver_Reading - sitting to listen works the same way.
         private Toil CarryToListeningSpot()
         {
             Toil toil = ToilMaker.MakeToil("CarryToListeningSpot");
             toil.initAction = delegate
             {
-                if (!TryGetClosestChairFreeSittingSpot(skipInteractionCells: true, out var cell)
+                if (!TryGetClosestChairFreeSittingSpot(skipInteractionCells: true, out IntVec3 cell)
                  && !TryGetClosestChairFreeSittingSpot(skipInteractionCells: false, out cell))
                 {
                     cell = RCellFinder.SpotToChewStandingNear(

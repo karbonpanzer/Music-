@@ -4,7 +4,8 @@ using Verse;
 
 namespace MusicAlbums.Doers
 {
-    // Displays the quality-scaled joy multiplier in the ITab benefits section. The actual joyFactor is set on MusicAlbum during GenerateAlbum from the quality curve and this doer only handles the UI string, same as how book doers expose their effect via GetBenefitsString for BookUIUtility to show.
+    // This doer exists purely to show the joy multiplier in the ITab benefits list. The actual joyFactor value gets set by AlbumOutcomeDoer_JoyFactorModifier at generation time.
+    // I split them because the modifier doer needs to run at generation and the display doer needs to run at UI time, and mixing those two responsibilities into one class felt wrong.
     public class AlbumOutcomeDoer_JoyFactor : AlbumOutcomeDoer
     {
         public override bool DoesProvideOutcome(Pawn listener) => false;

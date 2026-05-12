@@ -1,9 +1,10 @@
+using MusicAlbums;
 using RimWorld;
 using Verse;
 
 namespace MusicAlbums.Doers
 {
-    // The actual roll happens in the job driver's finish action where the pawn is in scope — this doer just holds the chance table and the benefits string.
+    // The actual roll happens in the job driver's finish action where the pawn is in scope - this doer just holds the chance table and the benefits string.
     public class AlbumOutcomeDoer_Inspiration : AlbumOutcomeDoer
     {
         private static readonly float[] ChanceByQuality = new float[]

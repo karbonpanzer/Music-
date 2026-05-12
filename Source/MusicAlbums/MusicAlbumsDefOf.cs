@@ -8,6 +8,7 @@ namespace MusicAlbums
     {
         public static JobDef ListenToAlbum;
 
+
         static MusicAlbumsDefOf()
         {
             DefOfHelper.EnsureInitializedInCtor(typeof(MusicAlbumsDefOf));

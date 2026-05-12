@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using MusicAlbums.Comps;
-using MusicAlbums.Doers;
 using MusicAlbums.UI;
 using RimWorld;
 using UnityEngine;
@@ -14,6 +13,7 @@ namespace MusicAlbums.Buildings
 
         public Building_CDRack Rack => base.SelThing as Building_CDRack;
 
+        // ITab_ContentsBase.container expects IList<Thing> so I have to copy the inner list out. ThingOwner doesn't implement IList directly, hence the manual build rather than a cast.
         public override IList<Thing> container
         {
             get
@@ -82,14 +82,16 @@ namespace MusicAlbums.Buildings
             Rect dropBtn = new Rect(rect.width - 24f, curY, 24f, 24f);
             if (Widgets.ButtonImage(dropBtn, DropTex.Texture))
             {
+                // Pick a walkable adjacent cell to drop onto; fall back to the rack's own position if nothing walkable is adjacent, which can happen in tight base layouts.
                 List<IntVec3> walkable = new List<IntVec3>();
                 foreach (IntVec3 cell in Rack.OccupiedRect().AdjacentCells)
                     if (cell.Walkable(Rack.Map))
                         walkable.Add(cell);
-                if (!walkable.TryRandomElement(out var result))
+
+                if (!walkable.TryRandomElement(out IntVec3 result))
                     result = Rack.Position;
 
-                Rack.GetDirectlyHeldThings().TryDrop(album, result, Rack.Map, ThingPlaceMode.Near, 1, out var dropped);
+                Rack.GetDirectlyHeldThings().TryDrop(album, result, Rack.Map, ThingPlaceMode.Near, 1, out Thing dropped);
                 if (dropped.TryGetComp(out CompForbiddable comp))
                     comp.Forbidden = true;
             }

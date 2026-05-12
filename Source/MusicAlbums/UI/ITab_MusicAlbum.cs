@@ -7,7 +7,7 @@ using Verse;
 
 namespace MusicAlbums.UI
 {
-    // I can't call BookUIUtility directly since its methods take a Book, so I'm replicating the same three-panel layout from ITab_Book here with the rect math copied verbatim so it looks identical.
+    // BookUIUtility only accepts Book, so I can't reuse it here. I've copied the three-panel layout from ITab_Book with the rect math left identical so the two tabs look the same.
     public class ITab_MusicAlbum : ITab
     {
         private Vector2 descScroll;
@@ -119,19 +119,21 @@ namespace MusicAlbums.UI
         private static void DrawHyperlinks(Rect rect, ref float y, MusicAlbum album)
         {
             Color normalOptionColor = Widgets.NormalOptionColor;
-            float num = 0f;
+            float offset = 0f;
+
+            // Hyperlinks render bottom-up so I iterate in reverse.
             List<Dialog_InfoCard.Hyperlink> links = new List<Dialog_InfoCard.Hyperlink>(album.GetHyperlinks());
             for (int i = links.Count - 1; i >= 0; i--)
             {
                 Dialog_InfoCard.Hyperlink item = links[i];
-                float num2 = Text.CalcHeight(item.Label, rect.width);
+                float height = Text.CalcHeight(item.Label, rect.width);
                 Rect linkRect = rect;
-                linkRect.y = rect.yMax - num2 - num - 4f;
-                linkRect.height = num2;
-                TaggedString taggedString = "ViewHyperlink".Translate(item.Label);
-                Widgets.HyperlinkWithIcon(linkRect, item, taggedString, 2f, 6f, normalOptionColor);
-                num += num2;
-                y += num2;
+                linkRect.y = rect.yMax - height - offset - 4f;
+                linkRect.height = height;
+                TaggedString label = "ViewHyperlink".Translate(item.Label);
+                Widgets.HyperlinkWithIcon(linkRect, item, label, 2f, 6f, normalOptionColor);
+                offset += height;
+                y += height;
             }
         }
 

@@ -11,7 +11,7 @@ using Verse.Grammar;
 
 namespace MusicAlbums
 {
-    // Keeping this close to Book so it feels native. IsOpen becomes IsPlaying, mentalBreakChance is dropped since that's an Anomaly hook I don't need, and verticalGraphic is gone because CDs don't stand on shelves.
+    // I'm keeping this close to Book so it feels native to the codebase. IsOpen becomes IsPlaying,mentalBreakChance is dropped because that's an Anomaly hook I don't need, and the subject/topic symbol system is skipped because albums don't have skill topics the way novels do.
     public class MusicAlbum : ThingWithComps
     {
         private string title;
@@ -63,7 +63,7 @@ namespace MusicAlbums
             }
         }
 
-        // If there's no CompQuality I generate immediately; otherwise I wait for PostQualitySet so quality is known before the grammar runs.
+        // If there's no CompQuality I generate immediately. Otherwise I wait for PostQualitySet so the quality is known before the grammar runs, generating before quality is set would give everything Normal-quality descriptions regardless of what it actually rolls.
         public override void PostPostMake()
         {
             base.PostPostMake();
@@ -102,14 +102,14 @@ namespace MusicAlbums
 
             if (!AlbumUtility.CanListenToAlbum(this, selPawn, out string reason))
             {
-                option.Label = $"{"AssignCannotListenNow".Translate(Label)}: {reason}";
+                option.Label = string.Format("{0}: {1}", "AssignCannotListenNow".Translate(Label), reason);
                 option.Disabled = true;
             }
 
             Pawn reserver = selPawn.Map.reservationManager.FirstRespectedReserver(this, selPawn)
                          ?? selPawn.Map.physicalInteractionReservationManager.FirstReserverOf(this);
             if (reserver != null)
-                option.Label += $" ({"ReservedBy".Translate(reserver.LabelShort, reserver)})";
+                option.Label += string.Format(" ({0})", "ReservedBy".Translate(reserver.LabelShort, reserver));
 
             option.iconThing = this;
             yield return option;
@@ -128,7 +128,7 @@ namespace MusicAlbums
                 JobTag.Misc);
         }
 
-        // Reusing ReadingSpeed as a media engagement stat rather than adding a new one.
+        // I'm reusing ReadingSpeed as the engagement stat rather than defining a new one. ListeningSpeed would just be a copy of ReadingSpeed with a different name.
         public void OnAlbumListenTick(Pawn pawn, int delta, float roomBonusFactor)
         {
             float factor = pawn.GetStatValue(StatDefOf.ReadingSpeed) * roomBonusFactor * delta;
@@ -152,7 +152,6 @@ namespace MusicAlbums
                     yield return link;
         }
 
-        // I skip the subject/topic symbol system from Book because my grammar rules don't need it — albums don't have skill topics the way novels do.
         public virtual void GenerateAlbum(Pawn artist = null, long? fixedDate = null)
         {
             GrammarRequest common = default;
@@ -195,9 +194,9 @@ namespace MusicAlbums
                 doer.Reset();
                 doer.OnAlbumGenerated(artist);
 
-                var extraRules = doer.GetTopicRuleStrings();
+                IEnumerable<Rule_String> extraRules = doer.GetTopicRuleStrings();
                 if (extraRules == null) continue;
-                foreach (var rule in extraRules)
+                foreach (Rule_String rule in extraRules)
                     common.Rules.Add(rule);
             }
         }
@@ -210,7 +209,7 @@ namespace MusicAlbums
 
         private string GenerateFullDescription()
         {
-            var sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             descCanBeInvalidated = false;
 
             sb.AppendLine(title.Colorize(ColoredText.TipSectionTitleColor)

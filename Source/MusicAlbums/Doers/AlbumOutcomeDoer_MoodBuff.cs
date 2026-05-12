@@ -1,3 +1,4 @@
+using MusicAlbums;
 using RimWorld;
 using Verse;
 
@@ -43,7 +44,7 @@ namespace MusicAlbums.Doers
         public override string GetBenefitsString(Pawn listener = null)
         {
             if (MoodProps.thought == null) return "";
-            var stageDef = MoodProps.thought.stages?[(int)Quality];
+            ThoughtStage stageDef = MoodProps.thought.stages?[(int)Quality];
             if (stageDef == null) return "";
             return string.Format(" - {0}: {1}", stageDef.label.CapitalizeFirst(), stageDef.baseMoodEffect.ToStringWithSign());
         }
