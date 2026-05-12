@@ -8,51 +8,60 @@
         <li>desc->[overview]. [production]. [reception].</li>
         <li>desc->[overview]. [anecdote]. [reception].</li>
         <li>desc->[overview]\n\n[anecdote]. [production].\n\n[quality_statement].</li>
+        <li>desc->[overview]. [sound]. [reception].</li>
+        <li>desc->[overview]\n\n[sound]. [anecdote].\n\n[quality_statement].</li>
 
         <li>overview->A [genre] [format] by [artist]</li>
         <li>overview->An [era] [genre] [format] attributed to [artist]</li>
         <li>overview->A [adjective_quality] [genre] recording from [artist]</li>
-        <li>overview->Recorded by [artist], this [format] blends [genre] with [genre2] influences</li>
-        <li>overview->The liner notes credit [artist] as the sole composer and performer</li>
-        <li>overview->[artist]'s [ordinal] studio [format]</li>
-        <li>overview->A live [format] captured somewhere in [worldname]</li>
-        <li>overview->A collaborative [format] from the [worldname] music scene</li>
+        <li>overview->Recorded by [artist], this [format] blends &lt;i&gt;[genre]&lt;/i&gt; with &lt;i&gt;[genre2]&lt;/i&gt; influences</li>
+        <li>overview->The liner notes credit [artist] as the sole composer and performer of this [genre] [format]</li>
+        <li>overview->[artist]'s [ordinal] studio [format], filed under &lt;i&gt;[genre]&lt;/i&gt;</li>
+        <li>overview->A live [genre] [format] captured somewhere in [worldname], credited to [artist]</li>
+        <li>overview->A collaborative [genre] [format] from the [worldname] music scene, featuring [artist]</li>
+        <li>overview->Somewhere between &lt;i&gt;[genre]&lt;/i&gt; and &lt;i&gt;[genre2]&lt;/i&gt;, this [format] by [artist] resists easy classification</li>
+        <li>overview->Pure [genre] with no concessions and no crossover. [artist] at their most committed</li>
+        <li>overview->A [genre] [format] by [artist] that defined what the genre could sound like in its era</li>
 
         <li>production->The liner notes say it was pressed in limited quantities by a small label on [worldname]</li>
-        <li>production->According to the [disc_location], it was self-released by [artist] after a string of rejections</li>
-        <li>production->The [disc_location] says the recording was made in a single overnight session</li>
-        <li>production->The liner notes indicate this was the last thing [artist] ever recorded</li>
+        <li>production->According to the [disc_location], it was self-released by [artist] after a string of rejections from every [genre] label they approached</li>
+        <li>production->The [disc_location] says the [genre] recording was made in a single overnight session</li>
+        <li>production->The liner notes indicate this was the last [genre] work [artist] ever recorded</li>
         <li>production->A stamped note on the [disc_location] says this was one of only fifty copies pressed</li>
-        <li>production->The [disc_location] notes that all master recordings were lost in a fire, making this a rare survivor</li>
-        <li>production->According to the [disc_location], the original pressing sold poorly but became sought after later</li>
-        <li>production->The [disc_location] claims this was recorded in a single room with no professional equipment</li>
-        <li>production->A handwritten note on the [disc_location] says copies were distributed free of charge</li>
-        <li>production->The [disc_location] credits over a dozen musicians, none of whom are named anywhere else</li>
-        <li>production->The [disc_location] says [artist] spent three years writing these compositions before recording them</li>
-        <li>production->According to the [disc_location], this was intended for a film that was never made</li>
+        <li>production->The [disc_location] notes that all master recordings were lost in a fire, making this one of the few surviving documents of their [genre] period</li>
+        <li>production->According to the [disc_location], the original pressing sold poorly but the [genre] community has since reconsidered it</li>
+        <li>production->The [disc_location] claims the [genre] sessions were recorded in a single room with no professional equipment</li>
+        <li>production->A handwritten note inside says copies were distributed free of charge at [genre] shows across [worldname]</li>
+        <li>production->The [disc_location] credits over a dozen [genre] musicians, none of whom are named anywhere else</li>
+        <li>production->The [disc_location] says [artist] spent three years writing these [genre] compositions before recording them</li>
+        <li>production->According to the [disc_location], this [genre] [format] was intended for a film that was never made</li>
 
-        <li>reception(quality[greater_than]4)->By most accounts it is considered a landmark recording of its era</li>
-        <li>reception(quality[greater_than]4)->The [disc_location] is filled with glowing critical praise</li>
-        <li>reception(quality[greater_than]3)->It found an appreciative audience, if not a large one</li>
-        <li>reception(quality[greater_than]3)->Most who encounter it seem to find it moving in some way</li>
-        <li>reception(quality[less_than]4)->Critics were divided, though listeners seemed warmer to it</li>
-        <li>reception(quality[less_than]4)->It passed largely without notice on release</li>
-        <li>reception(quality[less_than]3)->Reviews at the time were unkind</li>
+        <li>reception(quality[greater_than]4)->By most accounts it is considered a landmark [genre] recording of its era</li>
+        <li>reception(quality[greater_than]4)->The [disc_location] is filled with glowing critical praise for its contribution to &lt;i&gt;[genre]&lt;/i&gt;</li>
+        <li>reception(quality[greater_than]4)->Those who care about &lt;i&gt;[genre]&lt;/i&gt; tend to speak of it with unusual reverence</li>
+        <li>reception(quality[greater_than]3)->It found an appreciative audience among [genre] listeners, if not a large one</li>
+        <li>reception(quality[greater_than]3)->Most who encounter it seem to find something in the [genre] that moves them</li>
+        <li>reception(quality[less_than]4)->Critics of the [genre] were divided, though general listeners seemed warmer to it</li>
+        <li>reception(quality[less_than]4)->It passed largely without notice on release, even within [genre] circles</li>
+        <li>reception(quality[less_than]3)->Reviews at the time were unkind, calling the [genre] approach derivative</li>
         <li>reception(quality[less_than]2)->It is unclear why it was ever pressed at all</li>
-        <li>reception(quality==6)->It is spoken of in hushed tones by those who know it</li>
+        <li>reception(quality==6)->Those who know it speak of it in hushed tones, calling it a quiet landmark of the &lt;i&gt;[genre]&lt;/i&gt; tradition</li>
 
-        <li>anecdote->According to the [disc_location], [artist] wrote the opening track during a siege</li>
-        <li>anecdote->A note inside says that [artist] refused to listen to a playback of the finished recording</li>
-        <li>anecdote->The [disc_location] mentions that [artist] was reportedly in poor health throughout the sessions</li>
-        <li>anecdote->According to the [disc_location], [artist] dedicated the [format] to someone named only as 'R'</li>
-        <li>anecdote->The [disc_location] claims [artist] was unaware the sessions were being recorded</li>
-        <li>anecdote->A scrawled note on the inner sleeve reads 'this one is for those who didn't make it'</li>
-        <li>anecdote->According to the [disc_location], the [format] was recorded in an abandoned building on [worldname]</li>
-        <li>anecdote->The [disc_location] says [artist] performed the entire [format] in one continuous take</li>
-        <li>anecdote->According to the [disc_location], [artist] never spoke publicly about this [format]</li>
-        <li>anecdote->A faded inscription inside reads '[artist] — [worldname] — [date]'</li>
-        <li>anecdote->The [disc_location] thanks 'everyone who survived'</li>
-        <li>anecdote->According to the [disc_location], [artist] considered this [format] a failure and was reportedly furious it was released</li>
+        <li>anecdote->According to the [disc_location], [artist] wrote the opening [genre] track during a siege</li>
+        <li>anecdote->A note inside says that [artist] refused to listen to a playback of the finished [genre] recording</li>
+        <li>anecdote->The [disc_location] mentions that [artist] was reportedly in poor health throughout the [genre] sessions</li>
+        <li>anecdote->According to the [disc_location], [artist] dedicated the [format] to someone named only as "R"</li>
+        <li>anecdote->The [disc_location] claims [artist] was unaware the [genre] sessions were being recorded</li>
+        <li>anecdote->A scrawled note on the inner sleeve reads "this one is for those who didn't make it"</li>
+        <li>anecdote->According to the [disc_location], the [genre] [format] was recorded in an abandoned building on [worldname]</li>
+        <li>anecdote->The [disc_location] says [artist] performed the entire [genre] [format] in one continuous take</li>
+        <li>anecdote->According to the [disc_location], [artist] never spoke publicly about this [format] or what drove them toward [genre] at that point in their life</li>
+        <li>anecdote->A faded inscription inside reads "[artist], [worldname], [date]"</li>
+        <li>anecdote->The [disc_location] thanks "everyone who survived"</li>
+        <li>anecdote->According to the [disc_location], [artist] considered this [genre] [format] a failure and was reportedly furious it was released</li>
+        <li>anecdote->The [disc_location] describes a [genre] scene that no longer exists, captured here by accident</li>
+        <li>anecdote->A note inside says [artist] had never worked in [genre] before this recording and never returned to it afterward</li>
+        <li>anecdote->The [disc_location] suggests [artist] made this [format] as a deliberate departure from their earlier &lt;i&gt;[genre2]&lt;/i&gt; work</li>
 
         <li>adjective_quality(quality==6)->extraordinary</li>
         <li>adjective_quality(quality==5)->masterful</li>
@@ -62,13 +71,14 @@
         <li>adjective_quality(quality==1)->rough</li>
         <li>adjective_quality(quality==0)->amateurish</li>
 
-        <li>quality_statement(quality[greater_than]4)->Listening to it, it is easy to understand why some consider it essential</li>
-        <li>quality_statement(quality[greater_than]4)->There is something in it that feels genuinely irreplaceable</li>
-        <li>quality_statement(quality[greater_than]3)->It holds up well, even across the distance of years</li>
-        <li>quality_statement(quality[greater_than]3)->Not everyone would call it great, but most would call it good</li>
-        <li>quality_statement(quality[less_than]4)->Its flaws are audible, but so is the effort behind it</li>
-        <li>quality_statement(quality[less_than]3)->It is more interesting as an artifact than as a listening experience</li>
-        <li>quality_statement(quality[less_than]2)->It is hard to recommend, even to completionists</li>
+        <li>quality_statement(quality[greater_than]4)->Listening to it, it is easy to understand why some consider it essential &lt;i&gt;[genre]&lt;/i&gt;</li>
+        <li>quality_statement(quality[greater_than]4)->There is something in the [genre] here that feels genuinely irreplaceable</li>
+        <li>quality_statement(quality[greater_than]4)->For anyone with an interest in &lt;i&gt;[genre]&lt;/i&gt;, it is required listening</li>
+        <li>quality_statement(quality[greater_than]3)->It holds up well as a [genre] document, even across the distance of years</li>
+        <li>quality_statement(quality[greater_than]3)->Not everyone would call it great [genre], but most would call it good</li>
+        <li>quality_statement(quality[less_than]4)->Its approach to [genre] has flaws, but the effort behind it is audible</li>
+        <li>quality_statement(quality[less_than]3)->It is more interesting as an artifact of the [genre] scene than as a listening experience</li>
+        <li>quality_statement(quality[less_than]2)->It is hard to recommend, even to completionists of the &lt;i&gt;[genre]&lt;/i&gt;</li>
 
         <li>artist->[ANYPAWN_nameFull]</li>
         <li>artist->[ANYPAWN_nameIndef] and the [bandSuffix]</li>
@@ -76,6 +86,14 @@
         <li>artist->The [worldname] [bandSuffix]</li>
         <li>artist->[ANYPAWN_nameIndef]'s [bandSuffix]</li>
         <li>artist->an unnamed [performer]</li>
+        <li>artist->[ANYPAWN_nameIndef] &amp; [ANYPAWN_nameIndef]</li>
+        <li>artist->[ANYPAWN_nameIndef] feat. [ANYPAWN_nameIndef]</li>
+        <li>artist->[ANYPAWN_nameIndef] with the [bandSuffix]</li>
+        <li>artist->DJ [ANYPAWN_nameIndef]</li>
+        <li>artist->MC [ANYPAWN_nameIndef]</li>
+        <li>artist->[ANYPAWN_nameIndef] of the [bandSuffix]</li>
+        <li>artist->The [ANYPAWN_nameIndef] [bandSuffix]</li>
+        <li>artist->[bandSuffix] featuring [ANYPAWN_nameFull]</li>
 
         <li>bandSuffix->Collective</li>
         <li>bandSuffix->Ensemble</li>
@@ -87,37 +105,105 @@
         <li>bandSuffix->Drifters</li>
         <li>bandSuffix->Voices</li>
         <li>bandSuffix->Remnants</li>
+        <li>bandSuffix->Band</li>
+        <li>bandSuffix->Group</li>
+        <li>bandSuffix->Project</li>
+        <li>bandSuffix->Experience</li>
+        <li>bandSuffix->Experiment</li>
+        <li>bandSuffix->Assembly</li>
+        <li>bandSuffix->Coalition</li>
+        <li>bandSuffix->Union</li>
+        <li>bandSuffix->Movement</li>
+        <li>bandSuffix->Society</li>
+        <li>bandSuffix->Syndicate</li>
+        <li>bandSuffix->Brotherhood</li>
+        <li>bandSuffix->Sisters</li>
+        <li>bandSuffix->Crew</li>
+        <li>bandSuffix->Gang</li>
+        <li>bandSuffix->Outfit</li>
+        <li>bandSuffix->Situation</li>
+        <li>bandSuffix->Machine</li>
+        <li>bandSuffix->Engine</li>
+        <li>bandSuffix->Workshop</li>
+        <li>bandSuffix->Foundation</li>
+        <li>bandSuffix->Institute</li>
+        <li>bandSuffix->Department</li>
+        <li>bandSuffix->Division</li>
+        <li>bandSuffix->Chapter</li>
+        <li>bandSuffix->Company</li>
+        <li>bandSuffix->Faction</li>
+        <li>bandSuffix->Front</li>
+        <li>bandSuffix->Alliance</li>
+        <li>bandSuffix->League</li>
+        <li>bandSuffix->Order</li>
+        <li>bandSuffix->Circle</li>
+        <li>bandSuffix->Assembly</li>
+        <li>bandSuffix->Sessions</li>
+        <li>bandSuffix->Recordings</li>
+        <li>bandSuffix->Players</li>
+        <li>bandSuffix->Brothers</li>
+        <li>bandSuffix->Five</li>
+        <li>bandSuffix->Six</li>
+        <li>bandSuffix->Seven</li>
 
         <li>performer->musician</li>
         <li>performer->composer</li>
         <li>performer->singer</li>
         <li>performer->instrumentalist</li>
         <li>performer->group</li>
+        <li>performer->producer</li>
+        <li>performer->songwriter</li>
+        <li>performer->vocalist</li>
+        <li>performer->multi-instrumentalist</li>
+        <li>performer->guitarist</li>
+        <li>performer->pianist</li>
+        <li>performer->drummer</li>
+        <li>performer->bassist</li>
+        <li>performer->arranger</li>
+        <li>performer->bandleader</li>
+        <li>performer->session musician</li>
+        <li>performer->street performer</li>
+        <li>performer->recording artist</li>
+        <li>performer->artist</li>
+        <li>performer->performer</li>
 
         <li>genre->folk</li>
-        <li>genre->ambient</li>
-        <li>genre->classical</li>
         <li>genre->jazz</li>
-        <li>genre->drone</li>
-        <li>genre->electronic</li>
-        <li>genre->choral</li>
         <li>genre->blues</li>
-        <li>genre->experimental</li>
-        <li>genre->orchestral</li>
-        <li>genre->acoustic</li>
+        <li>genre->classical</li>
+        <li>genre->electronic</li>
         <li>genre->industrial</li>
-        <li>genre->chamber</li>
-        <li>genre->devotional</li>
+        <li>genre->orchestral</li>
+        <li>genre->rock</li>
+        <li>genre->punk</li>
+        <li>genre->metal</li>
+        <li>genre->rap</li>
+        <li>genre->country</li>
+        <li>genre->soul</li>
+        <li>genre->funk</li>
+        <li>genre->reggae</li>
+        <li>genre->pop</li>
+        <li>genre->opera</li>
+        <li>genre->synthwave</li>
 
         <li>genre2->folk</li>
-        <li>genre2->ambient</li>
-        <li>genre2->classical</li>
         <li>genre2->jazz</li>
+        <li>genre2->blues</li>
+        <li>genre2->classical</li>
         <li>genre2->electronic</li>
-        <li>genre2->noise</li>
-        <li>genre2->choral</li>
-        <li>genre2->minimalist</li>
-        <li>genre2->improvisational</li>
+        <li>genre2->industrial</li>
+        <li>genre2->orchestral</li>
+        <li>genre2->rock</li>
+        <li>genre2->punk</li>
+        <li>genre2->metal</li>
+        <li>genre2->rap</li>
+        <li>genre2->country</li>
+        <li>genre2->soul</li>
+        <li>genre2->funk</li>
+        <li>genre2->reggae</li>
+        <li>genre2->pop</li>
+        <li>genre2->opera</li>
+        <li>genre2->synthwave</li>
 
         <li>format->album</li>
         <li>format->recording</li>

@@ -1,7 +1,7 @@
 using RimWorld;
 using Verse;
 
-namespace MusicAlbums
+namespace MusicAlbums.Doers
 {
     // ThoughtDef needs exactly 7 stages matching QualityCategory order. Buff fires once per session, Reset clears it so the next listen works.
     public class AlbumOutcomeDoer_MoodBuff : AlbumOutcomeDoer

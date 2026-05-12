@@ -1,8 +1,9 @@
+using MusicAlbums.Utility;
 using RimWorld;
 using Verse;
 using Verse.AI;
 
-namespace MusicAlbums
+namespace MusicAlbums.Joy
 {
     // Using def.jobDef rather than hardcoding so the XML stays in control of which job runs.
     public class JoyGiver_ListenToAlbum : JoyGiver

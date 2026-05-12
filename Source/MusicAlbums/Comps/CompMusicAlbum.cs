@@ -1,17 +1,24 @@
 using System.Collections.Generic;
-using System.Linq;
+using MusicAlbums.Doers;
 using RimWorld;
 using Verse;
 
-namespace MusicAlbums
+namespace MusicAlbums.Comps
 {
     public class CompMusicAlbum : CompReadable
     {
         public new CompProperties_MusicAlbum Props =>
             (CompProperties_MusicAlbum)props;
 
-        public new IEnumerable<AlbumOutcomeDoer> Doers =>
-            base.Doers.OfType<AlbumOutcomeDoer>();
+        public new IEnumerable<AlbumOutcomeDoer> Doers
+        {
+            get
+            {
+                foreach (ReadingOutcomeDoer doer in base.Doers)
+                    if (doer is AlbumOutcomeDoer albumDoer)
+                        yield return albumDoer;
+            }
+        }
 
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
         {

@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-  <TabAlbumContents>Details</TabAlbumContents>
+  <TabAlbumContents>Album</TabAlbumContents>
   <AssignListenNow>Listen to {0} now</AssignListenNow>
   <AssignCannotListenNow>Cannot listen to {0}</AssignCannotListenNow>
   <AlbumCantListen>{PAWN_nameDef} cannot listen to music.</AlbumCantListen>
   <AlbumJoyFactor>Recreation gain multiplier</AlbumJoyFactor>
   <AlbumInspirationChance>Inspiration chance</AlbumInspirationChance>
   <AlbumInspirationReason>Moved by {0}</AlbumInspirationReason>
+  <TabCDRackContents>Contents</TabCDRackContents>
+  <ContainedCDsDesc>Music CDs stored in this rack.</ContainedCDsDesc>
+  <EjectCDTooltip>Remove this CD from the rack.</EjectCDTooltip>
+  <CDRackStoredInspect>Stored</CDRackStoredInspect>
 </LanguageData>

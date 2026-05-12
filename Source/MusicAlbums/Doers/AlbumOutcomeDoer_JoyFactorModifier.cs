@@ -1,7 +1,8 @@
+using MusicAlbums.Utility;
 using RimWorld;
 using Verse;
 
-namespace MusicAlbums
+namespace MusicAlbums.Doers
 {
     public class AlbumOutcomeDoer_JoyFactorModifier : AlbumOutcomeDoer
     {
@@ -14,7 +15,7 @@ namespace MusicAlbums
 
         public override string GetBenefitsString(Pawn listener = null)
         {
-            return string.Format(" - {0}: x{1}", "AlbumJoyFactor".Translate(), Album.JoyFactor.ToStringPercent());
+            return string.Format(" - {0}: x{1}", "AlbumJoyFactor".Translate(), Album.JoyFactor.ToString("F2"));
         }
     }
 }

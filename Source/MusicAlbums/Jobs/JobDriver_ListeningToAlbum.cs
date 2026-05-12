@@ -1,9 +1,12 @@
 using System.Collections.Generic;
+using MusicAlbums.Comps;
+using MusicAlbums.Doers;
+using MusicAlbums.Utility;
 using RimWorld;
 using Verse;
 using Verse.AI;
 
-namespace MusicAlbums
+namespace MusicAlbums.Jobs
 {
     // Kept close to JobDriver_Reading. Cuts are: no isLearningDesire path, no Intellectual skill gain. Reset moves to the finish action so the mood buff can fire again each session rather than only once per generation.
     public class JobDriver_ListeningToAlbum : JobDriver

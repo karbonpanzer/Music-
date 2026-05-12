@@ -3,7 +3,7 @@
 
   <JobDef>
     <defName>ListenToAlbum</defName>
-    <driverClass>MusicAlbums.JobDriver_ListeningToAlbum</driverClass>
+    <driverClass>MusicAlbums.Jobs.JobDriver_ListeningToAlbum</driverClass>
     <reportString>listening to TargetA</reportString>
     <joyDuration>4000</joyDuration>
     <joyKind>MusicListening</joyKind>

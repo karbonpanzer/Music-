@@ -3,7 +3,7 @@ using RimWorld;
 using Verse;
 using Verse.Grammar;
 
-namespace MusicAlbums
+namespace MusicAlbums.Doers
 {
     public abstract class AlbumOutcomeDoer : ReadingOutcomeDoer
     {

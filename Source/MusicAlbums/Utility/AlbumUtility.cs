@@ -1,10 +1,10 @@
 using System.Collections.Generic;
-using System.Linq;
+using MusicAlbums.Comps;
 using RimWorld;
 using Verse;
 using Verse.AI;
 
-namespace MusicAlbums
+namespace MusicAlbums.Utility
 {
     public static class AlbumUtility
     {
@@ -80,9 +80,9 @@ namespace MusicAlbums
             TmpCandidates.Clear();
             TmpOutcomeCandidates.Clear();
 
-            TmpCandidates.AddRange(
-                pawn.Map.listerThings.ThingsInGroup(ThingRequestGroup.HaulableAlways)
-                    .Where(t => t is MusicAlbum && IsValidAlbum(t, pawn)));
+            foreach (Thing t in pawn.Map.listerThings.ThingsInGroup(ThingRequestGroup.HaulableAlways))
+                if (t is MusicAlbum && IsValidAlbum(t, pawn))
+                    TmpCandidates.Add(t);
 
             if (TmpCandidates.Count == 0)
             {
@@ -138,9 +138,13 @@ namespace MusicAlbums
             return thing as MusicAlbum;
         }
 
-        public static List<ThingDef> GetAlbumDefs() =>
-            DefDatabase<ThingDef>.AllDefsListForReading
-                .Where(x => x.HasComp<CompMusicAlbum>())
-                .ToList();
+        public static List<ThingDef> GetAlbumDefs()
+        {
+            List<ThingDef> result = new List<ThingDef>();
+            foreach (ThingDef def in DefDatabase<ThingDef>.AllDefsListForReading)
+                if (def.HasComp<CompMusicAlbum>())
+                    result.Add(def);
+            return result;
+        }
     }
 }

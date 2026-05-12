@@ -2,7 +2,7 @@ using System;
 using RimWorld;
 using Verse;
 
-namespace MusicAlbums
+namespace MusicAlbums.Doers
 {
     public class AlbumOutcomeProperties_MoodBuff : AlbumOutcomeProperties
     {

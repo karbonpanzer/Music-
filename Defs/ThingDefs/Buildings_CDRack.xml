@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef Abstract="True" Name="CDRackBase" ParentName="ShelfBase">
+    <thingClass>MusicAlbums.Buildings.Building_CDRack</thingClass>
+    <drawerType>RealtimeOnly</drawerType>
+    <preventDroppingThingsOn>true</preventDroppingThingsOn>
+    <deselectedSelectionBracketFactor>0.3</deselectedSelectionBracketFactor>
+    <surfaceType>None</surfaceType>
+    <building>
+      <storageGroupTag>CDRack</storageGroupTag>
+      <maxItemsInCell>5</maxItemsInCell>
+      <blueprintClass>Blueprint_StorageWithRoomHighlight</blueprintClass>
+      <ignoreStoredThingsBeauty>false</ignoreStoredThingsBeauty>
+      <fixedStorageSettings>
+        <filter>
+          <categories Inherit="False">
+            <li>MusicAlbums</li>
+          </categories>
+        </filter>
+      </fixedStorageSettings>
+      <defaultStorageSettings>
+        <priority>Important</priority>
+        <filter>
+          <categories>
+            <li>MusicAlbums</li>
+          </categories>
+        </filter>
+      </defaultStorageSettings>
+    </building>
+    <inspectorTabs>
+      <li>MusicAlbums.Buildings.ITab_ContentsCDs</li>
+    </inspectorTabs>
+  </ThingDef>
+
+  <ThingDef ParentName="CDRackBase">
+    <defName>CDRack</defName>
+    <label>CD rack</label>
+    <description>A wide rack for storing and displaying up to ten music CDs. The collection adds beauty to the room. Stored CDs will never deteriorate.</description>
+    <graphicData>
+      <texPath>Things/Building/Furniture/Bookcase/Bookcase</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3,2)</drawSize>
+    </graphicData>
+    <costStuffCount>20</costStuffCount>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Mass>8</Mass>
+      <WorkToBuild>500</WorkToBuild>
+      <StyleDominance MayRequire="Ludeon.RimWorld.Ideology">6</StyleDominance>
+    </statBases>
+    <size>(2,1)</size>
+    <building>
+      <bookendGraphicEast>
+        <texPath>Things/Building/Furniture/Bookcase/Bookcase_Bookend_east</texPath>
+        <graphicClass>Graphic_Single</graphicClass>
+        <addTopAltitudeBias>true</addTopAltitudeBias>
+        <drawSize>(2,3)</drawSize>
+      </bookendGraphicEast>
+      <bookendGraphicNorth>
+        <texPath>Things/Building/Furniture/Bookcase/Bookcase_Bookend_north</texPath>
+        <graphicClass>Graphic_Single</graphicClass>
+        <addTopAltitudeBias>true</addTopAltitudeBias>
+        <drawSize>(3,2)</drawSize>
+      </bookendGraphicNorth>
+      <relatedBuildCommands>
+        <li>CDRackSmall</li>
+      </relatedBuildCommands>
+    </building>
+  </ThingDef>
+
+  <ThingDef ParentName="CDRackBase">
+    <defName>CDRackSmall</defName>
+    <label>small CD rack</label>
+    <description>A narrow rack for storing and displaying up to five music CDs. The collection adds beauty to the room. Stored CDs will never deteriorate.</description>
+    <graphicData>
+      <texPath>Things/Building/Furniture/Bookcase/BookcaseSmall</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(2,2)</drawSize>
+    </graphicData>
+    <uiIconScale>0.5</uiIconScale>
+    <costStuffCount>10</costStuffCount>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Mass>4</Mass>
+      <WorkToBuild>250</WorkToBuild>
+      <StyleDominance MayRequire="Ludeon.RimWorld.Ideology">3</StyleDominance>
+    </statBases>
+    <size>(1,1)</size>
+    <building>
+      <bookendGraphicEast>
+        <texPath>Things/Building/Furniture/Bookcase/BookcaseSmall_Bookend_east</texPath>
+        <graphicClass>Graphic_Single</graphicClass>
+        <addTopAltitudeBias>true</addTopAltitudeBias>
+        <drawSize>(2,2)</drawSize>
+      </bookendGraphicEast>
+      <bookendGraphicNorth>
+        <texPath>Things/Building/Furniture/Bookcase/BookcaseSmall_Bookend_north</texPath>
+        <graphicClass>Graphic_Single</graphicClass>
+        <addTopAltitudeBias>true</addTopAltitudeBias>
+        <drawSize>(2,2)</drawSize>
+      </bookendGraphicNorth>
+      <relatedBuildCommands>
+        <li>CDRack</li>
+      </relatedBuildCommands>
+    </building>
+  </ThingDef>
+
+</Defs>

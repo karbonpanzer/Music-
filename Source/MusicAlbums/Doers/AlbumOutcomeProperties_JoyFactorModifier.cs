@@ -1,6 +1,6 @@
 using System;
 
-namespace MusicAlbums
+namespace MusicAlbums.Doers
 {
     public class AlbumOutcomeProperties_JoyFactorModifier : AlbumOutcomeProperties
     {

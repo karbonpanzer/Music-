@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <RulePackDef>
+    <defName>Sound_MusicAlbum_folk</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>sound->Sparse acoustic strings and a single close-recorded voice, nothing between the listener and the performance</li>
+        <li>sound->Fingerpicked guitar carrying a melody the voice elaborates rather than repeats</li>
+        <li>sound->Two or three instruments recorded as if in the same room, the bleed between them left in</li>
+        <li>sound->Open tunings that give familiar chords an older, stranger resonance</li>
+        <li>sound->Verses that accumulate detail the way a journal does, one specific image after another</li>
+        <li>sound->The tempo unhurried enough that silence between phrases becomes part of the rhythm</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>Sound_MusicAlbum_jazz</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>sound->A piano comping behind a horn that treats the changes as suggestions rather than instructions</li>
+        <li>sound->The rhythm section locked in tight enough that the soloists can push against it without losing the pulse</li>
+        <li>sound->Standards played at a tempo that strips them down to what they actually are</li>
+        <li>sound->Improvisation that sounds inevitable in retrospect, as if the notes were always going to land there</li>
+        <li>sound->A bass walking the changes while everything above it shifts and reconsiders</li>
+        <li>sound->Modal rather than chordal, the harmony opening into something without obvious resolution</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>Sound_MusicAlbum_blues</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>sound->Slide guitar moving between notes in ways that suggest speech more than melody</li>
+        <li>sound->A twelve-bar structure repeated until the repetition stops being a constraint and becomes the point</li>
+        <li>sound->The voice bent around a note rather than hitting it directly, the approach doing most of the work</li>
+        <li>sound->Spaces between phrases held long enough to feel deliberate</li>
+        <li>sound->Electric guitar with just enough gain to blur the edges of each note into the next</li>
+        <li>sound->A stop-time break where everything drops out except the voice, and the silence earns its place</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>Sound_MusicAlbum_classical</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>sound->A theme introduced simply in the first movement and complicated past recognition by the third</li>
+        <li>sound->Counterpoint between two lines that seem to argue and resolve in the same breath</li>
+        <li>sound->Dynamics written into the score rather than performed into it, every swell precisely placed</li>
+        <li>sound->A string quartet in close voicing, each instrument audible as a distinct voice within the texture</li>
+        <li>sound->Development sections that take the opening material somewhere it did not appear to be going</li>
+        <li>sound->A coda that returns to the opening theme with enough distance to make it feel newly arrived at</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>Sound_MusicAlbum_electronic</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>sound->A grid of synthetic percussion underneath tones that have no acoustic origin</li>
+        <li>sound->Filters opening and closing across the frequency spectrum, the automation part of the melody</li>
+        <li>sound->Sequences that lock together at the start of a bar and drift apart by the end of it</li>
+        <li>sound->Sidechain compression making the bass breathe in time with the kick drum</li>
+        <li>sound->Textures built from samples processed until the source material is completely obscured</li>
+        <li>sound->A breakdown that removes everything except the kick and a single sustained tone, then rebuilds from there</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>Sound_MusicAlbum_industrial</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>sound->Percussion recorded in spaces designed for machinery rather than music, the room sound left untreated</li>
+        <li>sound->Distortion applied to sources it was not designed for, the result somewhere between tone and texture</li>
+        <li>sound->A tempo that does not swing or breathe, the grid absolute and unforgiving</li>
+        <li>sound->Samples of mechanical processes looped until they acquire a rhythm they were not built to have</li>
+        <li>sound->Dynamic contrast achieved not by playing quietly but by removing elements entirely</li>
+        <li>sound->A voice processed until the human origin is audible only as an implication</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>Sound_MusicAlbum_orchestral</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>sound->String sections divided into parts that cross and separate like moving crowds</li>
+        <li>sound->Brass entering after an extended string passage, the shift in color doing the work of a key change</li>
+        <li>sound->A solo instrument emerging from the full ensemble texture and returning to it without seam</li>
+        <li>sound->Pizzicato under a sustained woodwind line, the plucked strings providing rhythm without percussion</li>
+        <li>sound->A climax built across several minutes of preparation, the arrival unmistakable when it comes</li>
+        <li>sound->Silence used as punctuation between movements, the pause as composed as what surrounds it</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>Sound_MusicAlbum_rock</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>sound->A guitar riff that locks with the kick drum and does not deviate from that relationship for the duration</li>
+        <li>sound->Verse dynamics kept low enough that the chorus has somewhere to arrive from</li>
+        <li>sound->Overdrive used to sustain notes past where a clean signal would have faded</li>
+        <li>sound->A chorus doubled by a second guitar an octave up, the width filling the stereo field completely</li>
+        <li>sound->Drum fills that land on the one with enough conviction to feel inevitable</li>
+        <li>sound->A guitar solo that develops a melodic idea rather than demonstrating technique</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>Sound_MusicAlbum_punk</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>sound->Four chords played at a tempo that leaves no room between them for anything decorative</li>
+        <li>sound->A vocal recorded close and dry, every breath and consonant audible in the mix</li>
+        <li>sound->The snare hit harder than strictly necessary on every two and four</li>
+        <li>sound->Songs ending before a second verse would have time to repeat what the first already said</li>
+        <li>sound->Bass following the root notes of the guitar without elaboration, the simplicity a choice</li>
+        <li>sound->Recorded quickly enough that the performance has edges the production made no attempt to smooth</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>Sound_MusicAlbum_metal</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>sound->Guitars tuned low enough that individual notes blur into a texture of controlled distortion</li>
+        <li>sound->Polyrhythmic riffing that stays in tempo while implying several different meters simultaneously</li>
+        <li>sound->A double bass drum pattern running beneath riffs that shift accent without warning</li>
+        <li>sound->A breakdown section where the tempo halves and the weight doubles</li>
+        <li>sound->Lead guitar played in the upper register over rhythm guitars providing harmonic density below</li>
+        <li>sound->Dynamics achieved through arrangement rather than volume, the quiet sections carrying as much tension as the loud ones</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>Sound_MusicAlbum_rap</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>sound->Internal rhyme schemes that resolve across line breaks rather than at the end of each bar</li>
+        <li>sound->A beat built from a sample chopped and rearranged until it no longer resembles the source</li>
+        <li>sound->Flow that shifts cadence mid-verse without breaking the underlying pulse</li>
+        <li>sound->Production that leaves space around the vocal rather than filling every frequency</li>
+        <li>sound->A hook simple enough to hold and complex enough to reward returning to</li>
+        <li>sound->Verses dense enough that the meaning of earlier lines changes once the later ones land</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>Sound_MusicAlbum_country</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>sound->Pedal steel bending notes in the spaces the vocal leaves open</li>
+        <li>sound->A fiddle taking the melody after the second chorus, the instrument doing what the voice just did but differently</li>
+        <li>sound->Lyrics built around a specific object or place rather than a general feeling</li>
+        <li>sound->A walking bass line under acoustic guitar, the rhythm section understated enough to be almost invisible</li>
+        <li>sound->Harmonies entering in the chorus without announcement, lifting the arrangement by a third</li>
+        <li>sound->A final verse that recontextualizes the first one, the same words meaning something different by the end</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>Sound_MusicAlbum_soul</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>sound->A voice that treats pitch as a starting point and improvises around it throughout the phrase</li>
+        <li>sound->Horns arranged to punctuate the vocal rather than accompany it, each stab placed in a gap</li>
+        <li>sound->A rhythm section so tight it functions as a single instrument with several moving parts</li>
+        <li>sound->A key change in the final chorus that makes the same melody feel freshly urgent</li>
+        <li>sound->Backing vocals responding to the lead with phrases that complete what the lead implied</li>
+        <li>sound->A bridge that drops to half the instrumentation and doubles the emotional intensity</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>Sound_MusicAlbum_funk</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>sound->A bass line that establishes the harmonic foundation and the rhythmic groove simultaneously</li>
+        <li>sound->Guitar playing muted sixteenth notes around a chord voicing rather than through it</li>
+        <li>sound->The pocket found in the second bar of the intro and maintained for the remainder of the track</li>
+        <li>sound->Horn section writing that treats the arrangement as a percussion instrument with pitch</li>
+        <li>sound->A breakdown that removes everything except kick, bass, and a single rhythm element, then restores the full band one layer at a time</li>
+        <li>sound->Syncopation so consistent it stops feeling like syncopation and starts feeling like the grid</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>Sound_MusicAlbum_reggae</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>sound->The guitar playing the upbeat so consistently that the downbeat becomes an absence rather than a silence</li>
+        <li>sound->Sub-bass frequencies carrying the low end past where most speakers can reproduce them accurately</li>
+        <li>sound->A drum pattern where the kick lands in places that feel wrong until the groove establishes itself</li>
+        <li>sound->Dub echo applied to individual elements in the mix, the delay trails becoming a secondary melody</li>
+        <li>sound->Organ filling the midrange with sustained chords that change slowly against the rhythm section below</li>
+        <li>sound->Lyrics delivered in a cadence that stretches syllables past their natural length without losing the meter</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>Sound_MusicAlbum_pop</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>sound->A verse melody that avoids the tonic until the chorus resolves it, the anticipation doing most of the work</li>
+        <li>sound->Production layered densely enough that each listen surfaces something that was not audible in the last</li>
+        <li>sound->A pre-chorus that rises in pitch and energy across four bars before the drop into the hook</li>
+        <li>sound->Vocal harmonies tuned precisely enough to be invisible as harmonies and audible only as texture</li>
+        <li>sound->A middle eight that shifts the harmonic center far enough to make the final chorus feel like a return</li>
+        <li>sound->An outro that strips the production back to a single element, the ending quieter than anything that preceded it</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>Sound_MusicAlbum_opera</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>sound->A soprano sustaining a high note over an orchestra playing at full volume, the voice audible above all of it</li>
+        <li>sound->Recitative that moves through text quickly and economically before giving way to the full aria</li>
+        <li>sound->An ensemble passage where four separate vocal lines carry four separate emotional states simultaneously</li>
+        <li>sound->The libretto treated as raw material for the music rather than a text to be delivered</li>
+        <li>sound->A duet where the two voices trade phrases before combining on the final line, the resolution delayed until the last possible moment</li>
+        <li>sound->Orchestral interludes that restate the vocal themes in instrumental form, the translation changing what they mean</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>Sound_MusicAlbum_synthwave</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>sound->Arpeggiated synthesizer sequences running in patterns that never quite repeat identically</li>
+        <li>sound->A lead synth tone that sits in the upper midrange, present without being harsh, nostalgic without being specific</li>
+        <li>sound->Gated reverb on the snare, the decay cut short to leave the next beat space it would not otherwise have</li>
+        <li>sound->Chord progressions borrowed from somewhere the genre does not officially acknowledge</li>
+        <li>sound->A bass synth tracking the kick drum so closely the two become a single low-frequency event</li>
+        <li>sound->Production that evokes an era through texture and tone rather than through direct quotation</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+</Defs>

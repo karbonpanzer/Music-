@@ -1,5 +1,8 @@
 using System.Collections.Generic;
 using System.Text;
+using MusicAlbums.Comps;
+using MusicAlbums.Doers;
+using MusicAlbums.Utility;
 using RimWorld;
 using UnityEngine;
 using Verse;
@@ -19,6 +22,7 @@ namespace MusicAlbums
         private string description;
 
         private Graphic cachedPlayingGraphic;
+        private Graphic cachedVerticalGraphic;
         private CompMusicAlbum cachedComp;
 
         public CompMusicAlbum AlbumComp =>
@@ -27,6 +31,10 @@ namespace MusicAlbums
         private Graphic PlayingGraphic =>
             cachedPlayingGraphic ??
             (cachedPlayingGraphic = AlbumComp.Props.openGraphic?.Graphic);
+
+        public Graphic VerticalGraphic =>
+            cachedVerticalGraphic ??
+            (cachedVerticalGraphic = AlbumComp.Props.verticalGraphic?.Graphic);
 
         public float JoyFactor => joyFactor;
         public string Title => title;

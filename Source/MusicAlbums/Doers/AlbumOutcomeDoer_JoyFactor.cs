@@ -1,7 +1,8 @@
+using MusicAlbums.Utility;
 using RimWorld;
 using Verse;
 
-namespace MusicAlbums
+namespace MusicAlbums.Doers
 {
     // Displays the quality-scaled joy multiplier in the ITab benefits section. The actual joyFactor is set on MusicAlbum during GenerateAlbum from the quality curve and this doer only handles the UI string, same as how book doers expose their effect via GetBenefitsString for BookUIUtility to show.
     public class AlbumOutcomeDoer_JoyFactor : AlbumOutcomeDoer

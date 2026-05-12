@@ -32,7 +32,7 @@
       <li>MusicAlbums</li>
     </thingCategories>
     <inspectorTabs>
-      <li>MusicAlbums.ITab_MusicAlbum</li>
+      <li>MusicAlbums.UI.ITab_MusicAlbum</li>
     </inspectorTabs>
     <statBases>
       <MaxHitPoints>40</MaxHitPoints>
@@ -61,7 +61,7 @@
       <MarketValue>120</MarketValue>
     </statBases>
     <comps>
-      <li Class="MusicAlbums.CompProperties_MusicAlbum">
+      <li Class="MusicAlbums.Comps.CompProperties_MusicAlbum">
         <nameMaker>Namer_MusicAlbum</nameMaker>
         <descriptionMaker>Description_MusicAlbum</descriptionMaker>
         <ageYearsRange>5~200</ageYearsRange>
@@ -72,13 +72,18 @@
           <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>0.70</drawSize>
         </openGraphic>
+        <verticalGraphic>
+          <texPath>Things/Item/Book/Novel/Novel_Vertical</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <addTopAltitudeBias>true</addTopAltitudeBias>
+        </verticalGraphic>
         <doers>
-          <li Class="MusicAlbums.AlbumOutcomeProperties_JoyFactorModifier" />
-          <li Class="MusicAlbums.AlbumOutcomeProperties_MoodBuff">
+          <li Class="MusicAlbums.Doers.AlbumOutcomeProperties_JoyFactorModifier" />
+          <li Class="MusicAlbums.Doers.AlbumOutcomeProperties_MoodBuff">
             <thought>ListenedToAlbum</thought>
             <minListenFactor>2000</minListenFactor>
           </li>
-          <li Class="MusicAlbums.AlbumOutcomeProperties_Inspiration" />
+          <li Class="MusicAlbums.Doers.AlbumOutcomeProperties_Inspiration" />
         </doers>
       </li>
     </comps>

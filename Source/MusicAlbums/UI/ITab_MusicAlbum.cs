@@ -1,10 +1,11 @@
 using System.Collections.Generic;
-using System.Linq;
+using MusicAlbums.Comps;
+using MusicAlbums.Doers;
 using RimWorld;
 using UnityEngine;
 using Verse;
 
-namespace MusicAlbums
+namespace MusicAlbums.UI
 {
     // I can't call BookUIUtility directly since its methods take a Book, so I'm replicating the same three-panel layout from ITab_Book here with the rect math copied verbatim so it looks identical.
     public class ITab_MusicAlbum : ITab
@@ -18,7 +19,7 @@ namespace MusicAlbums
 
         public ITab_MusicAlbum()
         {
-            size = new Vector2(Mathf.Min(InitialWidth, UI.screenWidth), InitialHeight);
+            size = new Vector2(Mathf.Min(InitialWidth, Verse.UI.screenWidth), InitialHeight);
             labelKey = "TabAlbumContents";
         }
 
@@ -46,8 +47,8 @@ namespace MusicAlbums
             descRect.yMax = outer.yMax;
 
             DrawTitle(titleRect, album);
-            DrawBookInfoPanel(infoRect, album);
-            DrawBookDescPanel(descRect, album, ref descScroll);
+            DrawInfoPanel(infoRect, album);
+            DrawDescPanel(descRect, album, ref descScroll);
         }
 
         private static void DrawTitle(Rect rect, MusicAlbum album)
@@ -65,7 +66,7 @@ namespace MusicAlbums
             Text.Anchor = TextAnchor.UpperLeft;
         }
 
-        private static void DrawBookInfoPanel(Rect rect, MusicAlbum album)
+        private static void DrawInfoPanel(Rect rect, MusicAlbum album)
         {
             float y = rect.y;
             DrawBenefits(rect, ref y, album);
@@ -119,8 +120,10 @@ namespace MusicAlbums
         {
             Color normalOptionColor = Widgets.NormalOptionColor;
             float num = 0f;
-            foreach (Dialog_InfoCard.Hyperlink item in album.GetHyperlinks().Reverse())
+            List<Dialog_InfoCard.Hyperlink> links = new List<Dialog_InfoCard.Hyperlink>(album.GetHyperlinks());
+            for (int i = links.Count - 1; i >= 0; i--)
             {
+                Dialog_InfoCard.Hyperlink item = links[i];
                 float num2 = Text.CalcHeight(item.Label, rect.width);
                 Rect linkRect = rect;
                 linkRect.y = rect.yMax - num2 - num - 4f;
@@ -132,7 +135,7 @@ namespace MusicAlbums
             }
         }
 
-        private static void DrawBookDescPanel(Rect rect, MusicAlbum album, ref Vector2 scroll)
+        private static void DrawDescPanel(Rect rect, MusicAlbum album, ref Vector2 scroll)
         {
             Widgets.LabelScrollable(rect, album.FlavorUI, ref scroll);
         }

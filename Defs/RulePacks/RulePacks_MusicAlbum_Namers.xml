@@ -7,6 +7,7 @@
       <rulesStrings>
         <li>title->[titleStandalone]</li>
         <li>title(p=2)->[titleArtistNamed]</li>
+        <li>title(p=2)->[titleGenreLed]</li>
         <li>title(p=3)->[titleEvocative]</li>
 
         <li>titleStandalone->[emotion]</li>
@@ -27,6 +28,13 @@
         <li>titleArtistNamed->[ANYPAWN_nameIndef] Unplugged</li>
         <li>titleArtistNamed->The [ANYPAWN_nameIndef] [albumSuffix]</li>
         <li>titleArtistNamed->[ANYPAWN_nameIndef]'s [emotion] [albumSuffix]</li>
+
+        <li>titleGenreLed->[genre] [albumSuffix]</li>
+        <li>titleGenreLed->[adjective] [genre]</li>
+        <li>titleGenreLed->[place] [genre]</li>
+        <li>titleGenreLed->[genre] from [place]</li>
+        <li>titleGenreLed->[ANYPAWN_nameIndef]'s [genre] [albumSuffix]</li>
+        <li>titleGenreLed->The [genre] of [place]</li>
 
         <li>titleEvocative->Songs of [noun]</li>
         <li>titleEvocative->Songs from [place]</li>
@@ -62,6 +70,25 @@
         <li>albumSuffix->Chronicles</li>
         <li>albumSuffix->Works</li>
         <li>albumSuffix->Compositions</li>
+
+        <li>genre->Folk</li>
+        <li>genre->Jazz</li>
+        <li>genre->Blues</li>
+        <li>genre->Classical</li>
+        <li>genre->Electronic</li>
+        <li>genre->Industrial</li>
+        <li>genre->Orchestral</li>
+        <li>genre->Rock</li>
+        <li>genre->Punk</li>
+        <li>genre->Metal</li>
+        <li>genre->Rap</li>
+        <li>genre->Country</li>
+        <li>genre->Soul</li>
+        <li>genre->Funk</li>
+        <li>genre->Reggae</li>
+        <li>genre->Pop</li>
+        <li>genre->Opera</li>
+        <li>genre->Synthwave</li>
 
         <li>emotion->Sorrow</li>
         <li>emotion->Joy</li>

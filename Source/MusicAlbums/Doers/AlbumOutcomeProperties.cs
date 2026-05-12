@@ -1,7 +1,7 @@
 using System;
 using RimWorld;
 
-namespace MusicAlbums
+namespace MusicAlbums.Doers
 {
     public abstract class AlbumOutcomeProperties : ReadingOutcomeProperties
     {
